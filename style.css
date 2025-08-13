@@ -12,6 +12,7 @@ html, body{
 body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -62,6 +63,10 @@ body::selection {
     width: fit-content;
     display: flex;
     align-items: center;
+}
+
+#nav-left-part i {
+    display: none;
 }
 
 #nav-left-part img {
@@ -117,15 +122,15 @@ body::selection {
 }
 
 #discover-page {
-    height: 55%;
+    height: fit-content;
     width: 100%;
-    padding: 0 5vw;
+    padding: 0 5vw 2vw 5vw;
     display: flex;
+    align-items: stretch;
 }
 
 #discover-page-content {
     width: 50%;
-    height: 100%;
     padding-top: 0.75vw;
 }
 
@@ -133,23 +138,19 @@ body::selection {
     font-size: 3.5vw;
     font-weight: 100;
     font-family: mona-sans-semibold;
-    width: 70%;
     line-height: 3.25rem;
     transform: scale(1.15, 1);
     display: inline-block;
     transform-origin: top left;
 }
 
+#discover-page-content h1:nth-last-of-type(1) {
+    display: none;
+}
+
 #discover-page-content p {
     width: 70%;
     margin-top: 0.75rem;
-}
-
-#discover-page-video {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
 }
 
 #discover-page-section{
@@ -267,29 +268,35 @@ body::selection {
     background-color: #FAF9FB;
 }
 
+#discover-page-video {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    border: none;
+}
+
 #discover-page-video-box {
-    height: 95%;
-    width: 99%;
+    flex: 1;
+    width: 90%;
     border-radius: 30px;
     overflow: hidden;
     position: relative;
+    aspect-ratio: 16/9;
+    border: none;
 }
 
 #discover-page-video-box video {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    border: none;
 }
 
 #design-page {
     height: fit-content;
     width: 100%;
-    padding: 2vw 5vw;
+    padding: 0 5vw 2vw;
 }
 
 #design-page-section {
@@ -324,8 +331,7 @@ body::selection {
     margin-left: 0.5rem;
     transform: scale(2);
 }
-
-#design-section-part-2 {
+.design-section-part-2 {
     height: 100%;
     width: 80%;
     padding: 0 7vw;
@@ -333,24 +339,32 @@ body::selection {
     position: relative;
 }
 
-#design-section-scroller {
+.media-design-part-1 {
+    display: flex;
+}
+
+.media-design-part-2 {
+    display: none;
+}
+
+.design-section-scroller {
     display: flex;
     align-items: center;
     overflow-x: auto;
     overflow-y: hidden;
 }
 
-#design-section-part-2 h5 {
+.design-section-part-2 h5 {
     flex-shrink: 0;
     margin-right: 2.25rem;
     cursor: pointer;
 }
 
-#design-section-part-2 h5:hover {
+.design-section-part-2 h5:hover {
     color: #7B7194;
 }
 
-#design-section-scroller::-webkit-scrollbar {
+.design-section-scroller::-webkit-scrollbar {
     display: none;
 }
 
@@ -587,9 +601,9 @@ body::selection {
 }
 
 #footer {
-    height: 27%;
+    height: fit-content;
     width: 100%;
-    padding: 4vw 7.5vw;
+    padding: 4vw 7.5vw 4vw 7.5vw;
     display: flex;
     flex-direction: column;
 }
@@ -663,4 +677,169 @@ body::selection {
 
 #footer-part-2 p {
     cursor: pointer;
+}
+
+@media (max-width: 1430px) {
+    #discover-page-content h1:nth-last-of-type(1) {
+        display: block;
+    }
+    #discover-page-content h1:nth-of-type(1) {
+        display: none;
+    }
+    #discover-page-popular button:nth-last-of-type(1) {
+        display: none;
+    }
+}
+
+@media (max-width: 1335px) {
+    .content-box {
+        width: calc((100% - 5vw)/3);
+    }
+    #footer {
+        padding: 4vw 3vw 4vw 3vw;
+    }
+    #discover-page-popular button:nth-last-of-type(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    #nav-left-part i {
+        display: inline-block;
+        font-size: 1.5rem;
+        padding-right: 1.25rem;
+    }
+    
+    #nav-left-part h5 {
+        display: none;
+    }
+
+    #discover-page-content h1:nth-last-of-type(1) {
+        display: none;
+    }
+    #discover-page-content h1:nth-of-type(1) {
+        display: block;
+    }
+
+    #discover-page-video {
+        display: none;
+    } 
+
+    #discover-page-content h1 {
+        font-size: 4vw;
+    }
+
+    #discover-page-content {
+        width: 100%;
+    }
+
+    #discover-page-popular button:nth-last-of-type(2) {
+        display: block;
+    }
+
+    #discover-page-popular button:nth-last-of-type(1) {
+        display: block;
+    }
+
+    #design-section-part-3 button i {
+        margin-right: 0;
+    }
+
+    #discover-page-search-box {
+        width: 100%;
+    }
+
+    #footer-content {
+        gap: 1.5vw;
+        width: 90%;
+    }
+
+    #footer-sm-logo {
+        width: 10%;
+    }
+    #discover-page-content h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .media-design-part-1 {
+        display: none;
+    }
+
+    .media-design-part-2 {
+        display: flex;
+    }
+
+    #design-page {
+        width: 100%;
+    }
+
+    #design-page-section {
+        justify-content: space-between;
+        padding-bottom: 0.5rem;
+    }
+
+    .design-section-part-2 {
+        width: 100%;
+        padding: 1rem 0 0.5rem 0;
+        border-top: 1px solid rgb(216, 216, 216);
+    }
+    .content-box {
+        width: calc((100% - 2.5vw)/2);
+    }
+}
+
+@media (max-width: 905px) {
+    #footer-part-1 {
+        flex-direction: column;
+    }
+
+    #footer-logo {
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 0.5rem;
+    }
+
+    #footer-logo img {
+        height: 25px;
+        width: 85px;
+    }
+
+    #footer-content {
+        width: 100%;
+        gap: 1.5vw;
+        padding: 0.5rem 0;
+        font-size: 0.85rem;
+    }
+
+    #footer-sm-logo {
+        width: 100%;
+    }
+
+    #footer-sm-logo i {
+        padding: 0 0.1rem;
+    }
+
+    #footer-part-2-content-1 {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    #footer-part-2-content-2 {
+        gap: 0.4rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 650px) {
+    #footer-part-2 {
+        flex-direction: column;
+    }
+
+    #footer-part-2-content-1 {
+        padding-bottom: 0.5rem;
+    }
 }
