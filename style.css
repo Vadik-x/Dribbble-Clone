@@ -13,6 +13,7 @@ body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    padding: 0;
 }
 
 body::-webkit-scrollbar {
@@ -140,7 +141,7 @@ body::selection {
     font-family: mona-sans-semibold;
     line-height: 3.25rem;
     transform: scale(1.15, 1);
-    display: inline-block;
+    display: flex;
     transform-origin: top left;
 }
 
@@ -157,6 +158,7 @@ body::selection {
     height: fit-content;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2.5rem;
 }
@@ -244,16 +246,25 @@ body::selection {
     display: flex;
     align-items: center;
     height: fit-content;
-    width: fit-content;
+    width: 100%;
     margin-top: 1rem;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+}
+
+#discover-page-popular::-webkit-scrollbar {
+    display: none;
 }
 
 #discover-page-popular h5 {
+    flex-shrink: 0;
     margin-right: 0.5rem;
     margin-left: 1rem;
 }
 
 #discover-page-popular button {
+    flex-shrink: 0;
     padding: 0.45rem 1.15rem;
     border-radius: 25px;
     border: none;
@@ -262,6 +273,8 @@ body::selection {
     margin-right: 0.5rem;
     font-size: 0.75rem;
     cursor: pointer;
+    white-space: nowrap;
+    color: black;
 }
 
 #discover-page-popular button:hover {
@@ -321,6 +334,7 @@ body::selection {
     font-size: 0.95rem;
     font-weight: 500;
     cursor: pointer;
+    color: #000;
 }
 
 #design-section-part-1 button:hover {
@@ -358,6 +372,7 @@ body::selection {
     flex-shrink: 0;
     margin-right: 2.25rem;
     cursor: pointer;
+    color: #000;
 }
 
 .design-section-part-2 h5:hover {
@@ -383,6 +398,7 @@ body::selection {
     border: none;
     border: 2px solid #E9E9EB;
     cursor: pointer;
+    color: #000;
 }
 
 #design-section-part-3 button:hover {
@@ -790,6 +806,13 @@ body::selection {
     .content-box {
         width: calc((100% - 2.5vw)/2);
     }
+    #design-section-part-1 {
+        width: fit-content;
+    }
+
+    #design-section-part-3 {
+        width: fit-content;
+    }
 }
 
 @media (max-width: 905px) {
@@ -834,6 +857,42 @@ body::selection {
     }
 }
 
+@media (max-width: 750px) {
+    #nav {
+        padding: 0 1rem;
+    }
+
+    #discover-page {
+        padding: 0 1rem 2vw 1rem;
+    }
+
+    #design-page {
+        padding: 0 1rem 2vw;
+    }
+
+    #footer {
+        padding: 4vw 1rem 4vw 1rem;
+    }
+
+    #nav {
+        height: 3.5rem;
+        padding: 0 1rem;
+    }
+
+    #nav-left-part img {
+        height: 20px;
+        width: 78px;
+    }
+
+    #nav-right-part button {
+        height: 2.5rem;
+    }
+
+    #nav-right-part button:nth-of-type(1){
+        display: none;
+    }
+}
+
 @media (max-width: 650px) {
     #footer-part-2 {
         flex-direction: column;
@@ -841,5 +900,51 @@ body::selection {
 
     #footer-part-2-content-1 {
         padding-bottom: 0.5rem;
+    }
+
+    #discover-page-content h1 {
+        font-size: 2rem;
+        line-height: 2.25rem;
+        display: flex;
+        text-align: center;
+        transform-origin: center;
+    }
+
+    #discover-page-content p {
+        width: 100%;
+        text-align: center;
+    }
+
+    #discover-page-section{
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    #discover-page-section button {
+        padding: 0.6rem 1.3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-box {
+        width: 100%;
+    }
+
+    #footer-content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #footer-part-2-content-1 {
+        flex-wrap: wrap;
+    }
+
+    #footer-part-2-content-2 {
+        flex-wrap: wrap;
     }
 }
