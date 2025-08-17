@@ -25,19 +25,14 @@ This project is designed to perfectly fit **any screen width** — from **mobile
 
 ## 📸 Screenshots
 ### 💻 Laptop View  
-![Laptop Screenshot](./assets/screenshorts/dribble-laptop-view-1.png)
+![Laptop Screenshot](./assets/screenshorts/dribbble-laptop-view-1.jpg)
 ![Laptop Screenshot](./assets/screenshorts/dribbble-laptop-view-2.png)
-![Laptop Screenshot](./assets/screenshorts/dribbble-laptop-view-3.png)
 
 ### 📟 Tablet View  
-![Tablet Screenshot](./assets/screenshorts/dribbble-tablet-view-1.png)
-![Tablet Screenshot](./assets/screenshorts/dribbble-tablet-view-2.png)
-![Tablet Screenshot](./assets/screenshorts/dribbble-tablet-view-3.png)
+![Tablet Screenshot](./assets/screenshorts/dribbble-tablet-view.jpg)
 
 ### 📱 Mobile View  
-![Mobile Screenshot](./assets/screenshorts/dribbble-mobile-view-1.png)
-![Mobile Screenshot](./assets/screenshorts/dribbble-mobile-view-2.png)
-![Mobile Screenshot](./assets/screenshorts/dribbble-mobile-view-3.png)
+![Mobile Screenshot](./assets/screenshorts/dribbble-mobile-view.jpg)
 
 ---
 
